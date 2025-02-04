@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<img class = "abc" src = "img.png" alt="none">
+<video autoplay muted loop class="video">
+    <source src="2.mp4" type="video/mp4" class="v"></source>
+</video>
+
+<div class = "jai">
+    <p class="text">Why are you so Beautiful!.</p>
+<div class="container">
+    <a onclick = "window.location.replace('./main.html');" class="btn">press ME</a>
+</div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        let btns = document.querySelectorAll('.btn');
+        btns.forEach(function(btn){
+            let spans = []
+            for(let i=0;i<500;i++){
+                let span = document.createElement('span');
+                span.style.left = `${i}px`;
+                span.style.width='1px';
+                spans.push(span);
+                btn.appendChild(span);
+                let randomDeal = (Math.random() * 0.3);
+                span.style.transitionDelay = randomDeal + 's';
+            }
+        })
+    })
+</script>
+</body>
+</html>

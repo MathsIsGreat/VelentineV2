@@ -1,0 +1,121 @@
+body{
+  width:100vh;
+  height: 100vh;
+  background-image: linear-gradient(#ff146e, #f81919, #300f0f);
+}
+.abc{
+  position: fixed;
+  inset: 0;
+  width: 100vh;
+  height: 100vh;
+  opacity: 15%;
+  max-width: 100vw;
+  max-height: 100dvh;
+  margin: auto;
+  filter: blur(5px);-webkit-filter: blur(5px);
+}
+.jai{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  margin: 20vh auto auto;
+  display: inline-block;
+}
+.text{
+  text-align: center;
+  font-size: 3rem;
+  opacity: 90%;
+  font-family: "Dancing Script", serif;
+  font-weight: 1000;
+  color: #f1ebeb;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: auto;
+  animation:
+      typing 5s steps(100000);
+}
+@keyframes typing {
+  from{width:0}
+  to{width:100%}
+}
+.container{
+  font-family: "arial", ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  margin-top: -150px;
+
+}
+.btn{
+  position: relative;
+  width: 240px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 2em;
+  transition: 0.5s;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #e50914;
+  backdrop-filter: blur(8px);
+}
+
+.btn:hover{
+  filter: drop-shadow(0 0 10px #e50909) drop-shadow(0 0 30px #ffc2e3);
+  letter-spacing: 0.2em;
+  color: #fff;
+
+}
+
+.btn span{
+  position: absolute;
+  top: 0;
+  width : 2px;
+  height: 100%;
+  background: #e5091b;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+  z-index : -1;
+  transform:  scaleY(0);
+  transform-origin: bottom;
+
+}
+
+.btn:hover span{
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.btn span:nth-child(even)
+{
+  transform-origin: top;
+}
+
+.btn:hover span:nth-child(even)
+{
+  transform-origin: bottom;
+}
+.video{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	padding: 0px;
+	margin: 0px;
+	opacity: 0.3;
+    filter: blur(5px);
+    -webkit-filter: blur(2px);
+}
